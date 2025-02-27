@@ -11,7 +11,7 @@
                     <div class="col-auto">
                         <form class="form-inline">
                             <div class="form-group d-none d-lg-inline">
-                                <label for="reportrange" class="sr-only">Date Ranges</label>
+                                <label for="reportrange" class="sr-only">{{ __('keywords.dataRange') }}</label>
                                 <div id="reportrange" class="px-2 py-2 text-muted">
                                     <span class="small"></span>
                                 </div>
@@ -30,7 +30,7 @@
                         <div class="card-body">
                             <div class="row mt-1 align-items-center">
                                 <div class="col-12 col-lg-4 text-left pl-4">
-                                    <p class="mb-1 small text-muted">Balance</p>
+                                    <p class="mb-1 small text-muted">{{ __('keywords.balance') }}</p>
                                     <span class="h3">$12,600</span>
                                     <span class="small text-muted">+20%</span>
                                     <span class="fe fe-arrow-up text-success fe-12"></span>
@@ -38,7 +38,7 @@
                                         ullamcorper ultricies nisi. Nam eget dui </p>
                                 </div>
                                 <div class="col-6 col-lg-2 text-center py-4">
-                                    <p class="mb-1 small text-muted">Today</p>
+                                    <p class="mb-1 small text-muted">{{__('keywords.today')}}</p>
                                     <span class="h3">$2600</span><br />
                                     <span class="small text-muted">+20%</span>
                                     <span class="fe fe-arrow-up text-success fe-12"></span>
@@ -74,7 +74,7 @@
                             <div class="card-body mb-n3">
                                 <div class="row items-align-baseline h-100">
                                     <div class="col-md-6 my-3">
-                                        <p class="mb-0"><strong class="mb-0 text-uppercase text-muted">Earning</strong>
+                                        <p class="mb-0"><strong class="mb-0 text-uppercase text-muted">{{__('keywords.earning')}}</strong>
                                         </p>
                                         <h3>$2,562</h3>
                                         <p class="text-muted">Lorem ipsum dolor sit amet, consectetur
@@ -86,14 +86,14 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6 border-top py-3">
-                                        <p class="mb-1"><strong class="text-muted">Cost</strong></p>
+                                        <p class="mb-1"><strong class="text-muted">{{__('keywords.cost')}}</strong></p>
                                         <h4 class="mb-0">108</h4>
-                                        <p class="small text-muted mb-0"><span>37.7% Last week</span></p>
+                                        <p class="small text-muted mb-0"><span>37.7% {{__('keywords.lastWeek')}}</span></p>
                                     </div> <!-- .col -->
                                     <div class="col-md-6 border-top py-3">
-                                        <p class="mb-1"><strong class="text-muted">Revenue</strong></p>
+                                        <p class="mb-1"><strong class="text-muted">{{__('keywords.revenue')}}</strong></p>
                                         <h4 class="mb-0">1168</h4>
-                                        <p class="small text-muted mb-0"><span>-18.9% Last week</span></p>
+                                        <p class="small text-muted mb-0"><span>-18.9% {{__('keywords.lastWeek')}}</span></p>
                                     </div> <!-- .col -->
                                 </div>
                             </div> <!-- .card-body -->
@@ -107,17 +107,17 @@
                                 </div>
                                 <div class="row items-align-center">
                                     <div class="col-4 text-center">
-                                        <p class="text-muted mb-1">Cost</p>
+                                        <p class="text-muted mb-1">{{__('keywords.cost')}}</p>
                                         <h6 class="mb-1">$1,823</h6>
                                         <p class="text-muted mb-0">+12%</p>
                                     </div>
                                     <div class="col-4 text-center">
-                                        <p class="text-muted mb-1">Revenue</p>
+                                        <p class="text-muted mb-1">{{__('keywords.revenue')}}</p>
                                         <h6 class="mb-1">$6,830</h6>
                                         <p class="text-muted mb-0">+8%</p>
                                     </div>
                                     <div class="col-4 text-center">
-                                        <p class="text-muted mb-1">Earning</p>
+                                        <p class="text-muted mb-1">{{__('keywords.earning')}}</p>
                                         <h6 class="mb-1">$4,830</h6>
                                         <p class="text-muted mb-0">+8%</p>
                                     </div>
@@ -130,7 +130,7 @@
                             <div class="card-body">
                                 <div class="d-flex mt-3 mb-4">
                                     <div class="flex-fill pt-2">
-                                        <p class="mb-0 text-muted">Total</p>
+                                        <p class="mb-0 text-muted">{{__('keywords.total')}}</p>
                                         <h4 class="mb-0">108</h4>
                                         <span class="small text-muted">+37.7%</span>
                                     </div>
@@ -142,12 +142,12 @@
                                     <div class="col-md-6 pt-4">
                                         <h6 class="mb-0">108 <span class="small text-muted">+37.7%</span>
                                         </h6>
-                                        <p class="mb-0 text-muted">Cost</p>
+                                        <p class="mb-0 text-muted">{{__('keywords.cost')}}</p>
                                     </div>
                                     <div class="col-md-6 pt-4">
                                         <h6 class="mb-0">1168 <span class="small text-muted">-18.9%</span>
                                         </h6>
-                                        <p class="mb-0 text-muted">Revenue</p>
+                                        <p class="mb-0 text-muted">{{__('keywords.revenue')}}</p>
                                     </div>
                                 </div> <!-- .row -->
                             </div> <!-- .card-body -->
@@ -155,16 +155,16 @@
                     </div> <!-- .col-md -->
                 </div> <!-- .row -->
                 <div class="row">
-                    <!-- Recent Activity -->
+                    <!-- {{__('keywords.recentActivity')}} -->
                     <div class="col-md-12 col-lg-4 mb-4">
                         <div class="card timeline shadow">
                             <div class="card-header">
-                                <strong class="card-title">Recent Activity</strong>
-                                <a class="float-right small text-muted" href="#!">View all</a>
+                                <strong class="card-title">{{__('keywords.recentActivity')}}</strong>
+                                <a class="float-right small text-muted" href="#!">{{__('keywords.viewAll')}}</a>
                             </div>
                             <div class="card-body" data-simplebar
                                 style="height:355px; overflow-y: auto; overflow-x: hidden;">
-                                <h6 class="text-uppercase text-muted mb-4">Today</h6>
+                                <h6 class="text-uppercase text-muted mb-4">{{__('keywords.today')}}</h6>
                                 <div class="pb-3 timeline-item item-primary">
                                     <div class="pl-5">
                                         <div class="mb-1"><strong>@Brown Asher</strong><span
@@ -291,7 +291,7 @@
                         <div class="card shadow">
                             <div class="card-header">
                                 <strong class="card-title">Recent Data</strong>
-                                <a class="float-right small text-muted" href="#!">View all</a>
+                                <a class="float-right small text-muted" href="#!">{{__('keywords.viewAll')}}</a>
                             </div>
                             <div class="card-body my-n2">
                                 <table class="table table-striped table-hover table-borderless">
