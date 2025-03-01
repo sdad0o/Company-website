@@ -8,12 +8,15 @@ use {{ namespacedRequests }}
 
 class {{ class }} extends Controller
 {
+    private const DIR = 'admin.services.';
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        
+        $services = {{ model }}::paginate(config('pagination.count'));
+        return view(self::DIR . 'index', get_defined_vars());
     }
 
     /**
@@ -21,7 +24,7 @@ class {{ class }} extends Controller
      */
     public function create()
     {
-        //
+        return view(self::DIR . 'create', get_defined_vars());
     }
 
     /**
@@ -29,7 +32,9 @@ class {{ class }} extends Controller
      */
     public function store({{ storeRequest }} $request)
     {
-        //
+        $data = $request->validated();
+        {{ model }}::create($data);
+        return to_route(self::DIR . 'index')->with('success', __('keywords.created_successfuly'));
     }
 
     /**
@@ -37,7 +42,7 @@ class {{ class }} extends Controller
      */
     public function show({{ model }} ${{ modelVariable }})
     {
-        //
+        return view(self::DIR . 'show', get_defined_vars());
     }
 
     /**
@@ -45,7 +50,7 @@ class {{ class }} extends Controller
      */
     public function edit({{ model }} ${{ modelVariable }})
     {
-        //
+        return view(self::DIR . 'edit', get_defined_vars());
     }
 
     /**
@@ -53,7 +58,9 @@ class {{ class }} extends Controller
      */
     public function update({{ updateRequest }} $request, {{ model }} ${{ modelVariable }})
     {
-        //
+        $data = $request->validated();
+        ${{ modelVariable }}->update($data);
+        return to_route(self::DIR . 'index')->with('success', __('keywords.updated_successfuly'));
     }
 
     /**
@@ -61,6 +68,7 @@ class {{ class }} extends Controller
      */
     public function destroy({{ model }} ${{ modelVariable }})
     {
-        //
+        ${{ modelVariable }}->delete();
+        return to_route(self::DIR . 'index')->with('success', __('keywords.deleted_successfuly'));
     }
 }

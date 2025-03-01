@@ -11,33 +11,26 @@
                             enctype="multipart/form-data">
                             @method('PUT')
                             @csrf
-
                             <div class="row">
                                 <div class="col-md-6 mt-2">
-                                    <label for="title">{{ __('keywords.title') }}</label>
+                                    <x-form-label field="title"></x-form-label>
                                     <input type="text" name="title" class="form-control"
                                         placeholder="{{ __('keywords.title') }}" value="{{ $service->title }}">
-                                    @error('title')
-                                        <span class="text-danger">{{ $message }}</span>
-                                    @enderror
+                                    <x-validation-erorr field="title"></x-validation-erorr>
                                 </div>
                                 <div class="col-md-6 mt-2">
-                                    <label for="icon">{{ __('keywords.icon') }}</label>
+                                    <x-form-label field="icon"></x-form-label>
                                     <input type="text" name="icon" class="form-control"
                                         placeholder="{{ __('keywords.icon') }}" value="{{ $service->icon }}">
-                                    @error('icon')
-                                        <span class="text-danger">{{ $message }}</span>
-                                    @enderror
+                                    <x-validation-erorr field="icon"></x-validation-erorr>
                                 </div>
                                 <div class="col-md-12 mt-2">
-                                    <label for="description">{{ __('keywords.description') }}</label>
+                                    <x-form-label field="description"></x-form-label>
                                     <textarea name="description" class="form-control" placeholder="{{ __('keywords.description') }}">{{ $service->description }}</textarea>
-                                    @error('description')
-                                        <span class="text-danger">{{ $message }}</span>
-                                    @enderror
+                                    <x-validation-erorr field="description"></x-validation-erorr>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary btn-sm mt-3">{{ __('keywords.submit') }}</button>
+                            <x-submit-button></x-submit-button>
                         </form>
                     </div>
                 </div>

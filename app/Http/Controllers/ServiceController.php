@@ -8,13 +8,14 @@ use App\Http\Requests\UpdateServiceRequest;
 
 class ServiceController extends Controller
 {
+    private const DIR = 'admin.services.';
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $services = Service::paginate(10);
-        return view('admin.services.index', get_defined_vars());
+        $services = Service::paginate(config('pagination.count'));
+        return view(self::DIR . 'index', get_defined_vars());
     }
 
     /**
@@ -23,7 +24,7 @@ class ServiceController extends Controller
     public function create()
     {
 
-        return view('admin.services.create', get_defined_vars());
+        return view(self::DIR . 'create', get_defined_vars());
     }
 
     /**
@@ -34,7 +35,7 @@ class ServiceController extends Controller
         // dd($request->all());
         $data = $request->validated();
         Service::create($data);
-        return to_route('admin.services.index')->with('success', __('keywords.created_successfuly'));
+        return to_route(self::DIR . 'index')->with('success', __('keywords.created_successfuly'));
     }
 
     /**
@@ -42,7 +43,7 @@ class ServiceController extends Controller
      */
     public function show(Service $service)
     {
-        return view('admin.services.show', get_defined_vars());
+        return view(self::DIR . 'show', get_defined_vars());
     }
 
     /**
@@ -50,7 +51,7 @@ class ServiceController extends Controller
      */
     public function edit(Service $service)
     {
-        return view('admin.services.edit', get_defined_vars());
+        return view(self::DIR . 'edit', get_defined_vars());
     }
 
     /**
@@ -58,9 +59,9 @@ class ServiceController extends Controller
      */
     public function update(UpdateServiceRequest $request, Service $service)
     {
-        $data =$request->validated();
+        $data = $request->validated();
         $service->update($data);
-        return to_route('admin.services.index')->with('success', __('keywords.updated_successfuly'));
+        return to_route(self::DIR . 'index')->with('success', __('keywords.updated_successfuly'));
     }
 
     /**
@@ -69,6 +70,6 @@ class ServiceController extends Controller
     public function destroy(Service $service)
     {
         $service->delete();
-        return to_route('admin.services.index')->with('success', __('keywords.deleted_successfuly'));
+        return to_route(self::DIR . 'index')->with('success', __('keywords.deleted_successfuly'));
     }
 }
