@@ -45,6 +45,14 @@ return [
     'add_new_feature' => 'Add new feature',
     'show_feature' => 'Show feature',
     'edit_feature' => 'Edit feature',
+
+    // messages module
+    'messages' => 'Messages',
+    'show_message' => 'Show message',
+    'name' => 'Name',
+    'subject' => 'Subject',
+    'message' => 'Message',
+    
     '' => '',
     '' => '',
 ];
