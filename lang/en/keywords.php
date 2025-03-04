@@ -52,7 +52,8 @@ return [
     'name' => 'Name',
     'subject' => 'Subject',
     'message' => 'Message',
-    
-    '' => '',
+
+    //subscribers module
+    'subscribers' => 'Subscribers',
     '' => '',
 ];
