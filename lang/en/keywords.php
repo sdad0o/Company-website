@@ -55,5 +55,12 @@ return [
 
     //subscribers module
     'subscribers' => 'Subscribers',
-    '' => '',
+   
+    // testmonials module
+    'testmonials' => 'Testmonials',
+    'position' => 'Position',
+    'image' => 'Image',
+    'add_new_testmonial' => 'Add new testmonial',
+    'show_testmonial' => 'Show testmonial',
+    'edit_testmonial' => 'Edit testmonial',
 ];

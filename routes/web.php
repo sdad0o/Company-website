@@ -5,6 +5,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\FeatureController;
 use App\Http\Controllers\SubscriberController;
+use App\Http\Controllers\TestmonialController;
 use App\Models\Service;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -50,6 +51,10 @@ Route::name('admin.')->prefix(LaravelLocalization::setLocale() . '/admin')->midd
         // -------------subscribers page--------------------------
         Route::controller(SubscriberController::class)->group(function () {
             Route::resource('subscribers', SubscriberController::class)->only(['index','destroy']);
+        });
+        // -------------testmonials page--------------------------
+        Route::controller(TestmonialController::class)->group(function () {
+            Route::resource('testmonials', TestmonialController::class);
         });
     });
     require __DIR__ . '/auth.php';
