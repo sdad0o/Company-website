@@ -63,4 +63,14 @@ return [
     'add_new_testmonial' => 'Add new testmonial',
     'show_testmonial' => 'Show testmonial',
     'edit_testmonial' => 'Edit testmonial',
+
+    // settings module
+    'settings' => 'Settings',
+    'address' => 'Address',
+    'phone' => 'Phone',
+    'facebook' => 'Facebook',
+    'linkedin' => 'LinkedIn',
+    'instagram' => 'Instagram',
+    'youtube' => 'Youtube',
+    'twitter' => 'Twitter',
 ];

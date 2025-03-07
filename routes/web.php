@@ -4,6 +4,7 @@ use App\Http\Controllers\MessageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\FeatureController;
+use App\Http\Controllers\SettingController;
 use App\Http\Controllers\SubscriberController;
 use App\Http\Controllers\TestmonialController;
 use App\Models\Service;
@@ -55,6 +56,10 @@ Route::name('admin.')->prefix(LaravelLocalization::setLocale() . '/admin')->midd
         // -------------testmonials page--------------------------
         Route::controller(TestmonialController::class)->group(function () {
             Route::resource('testmonials', TestmonialController::class);
+        });
+        // -------------settings page--------------------------
+        Route::controller(SettingController::class)->group(function () {
+            Route::resource('settings', SettingController::class)->only(['index','update']);
         });
     });
     require __DIR__ . '/auth.php';

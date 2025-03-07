@@ -40,6 +40,9 @@
             <x-sidebar-tab href="{{ route('admin.subscribers.index') }}" icon="fe-users" name="{{ __('keywords.subscribers') }}"></x-sidebar-tab>
              {{-- testmonials --}}
             <x-sidebar-tab href="{{ route('admin.testmonials.index') }}" icon="fe-message-circle" name="{{ __('keywords.testmonials') }}"></x-sidebar-tab>
+            {{-- settings --}}
+            <x-sidebar-tab href="{{ route('admin.settings.index') }}" icon="fe-settings" name="{{ __('keywords.settings') }}"></x-sidebar-tab>
+
         </ul>
     </nav>
 </aside>
